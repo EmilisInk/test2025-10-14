@@ -9,7 +9,7 @@ public class Collectible : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            score++;
+            ScoreBoard.instance.AddScore(1);
             Destroy(gameObject);
         }
     }
