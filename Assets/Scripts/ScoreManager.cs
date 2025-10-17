@@ -10,6 +10,7 @@ public class ScoreBoard : MonoBehaviour
     public int currentHealth = 3;
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI health;
+    public AudioSource gameOverSound;
 
     private void Awake()
     {
@@ -51,6 +52,7 @@ public class ScoreBoard : MonoBehaviour
     public void DecreaseHealth(int amount)
     {
         currentHealth -= amount;
+
         UpdateHealthUI();
 
         if (currentHealth <= 0)
@@ -59,11 +61,20 @@ public class ScoreBoard : MonoBehaviour
         }
     }
 
+    public void IncreaseHealth(int amount)
+    {
+        currentHealth += amount;
+        UpdateHealthUI();
+    }
+
     private void GameOver()
     {
         // Implement game over logic here
         Debug.Log("Game Over!");
+        gameOverSound.Play();
         Time.timeScale = 0f;
     }
+
+
 }
 

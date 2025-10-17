@@ -5,10 +5,12 @@ using UnityEngine;
 public class Collectible : MonoBehaviour
 {
     public int score = 0;
+    public AudioSource collectedSound;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
+            collectedSound.Play();
             ScoreBoard.instance.AddScore(1);
             Destroy(gameObject);
         }

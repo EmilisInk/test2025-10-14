@@ -125,7 +125,7 @@ public partial class @Movement: IInputActionCollection2, IDisposable
                 {
                     ""name"": ""up"",
                     ""id"": ""354380de-0c0f-4623-b761-fc1edaa183ad"",
-                    ""path"": """",
+                    ""path"": ""<Keyboard>/w"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -136,7 +136,7 @@ public partial class @Movement: IInputActionCollection2, IDisposable
                 {
                     ""name"": ""down"",
                     ""id"": ""3343e258-4fe5-455a-b2e7-8957404d02a3"",
-                    ""path"": """",
+                    ""path"": ""<Keyboard>/s"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",

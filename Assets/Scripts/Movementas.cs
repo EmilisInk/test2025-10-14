@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -5,15 +6,50 @@ public class Movementas : MonoBehaviour
 {
     private Vector2 direction;
     public float moveSpeed = 5f;
+    private Rigidbody2D rb;
+    private Animator anim;
+    private SpriteRenderer spriteRenderer;
+    public AudioSource audioSource;
 
-    void Update()
+    private void Start()
     {
-        // Read horizontal input (A/D, Left/Right arrows, or joystick)
-        float horizontal = Input.GetAxisRaw("Horizontal");
-        direction = new Vector2(horizontal, 0f);
+        anim = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        rb = GetComponent<Rigidbody2D>();
+    }
 
-        // Create a direction vector (x = horizontal, y = 0)
-        transform.Translate(direction * moveSpeed * Time.deltaTime);
+
+    void FixedUpdate()
+    {
+        float horizontal = Input.GetAxisRaw("Horizontal");
+        rb.mass = 20f;
+
+        rb.velocity = new Vector2(horizontal * moveSpeed, rb.velocity.y);
+
+        if (anim != null)
+        {
+            anim.SetBool("isWalking", horizontal != 0);
+        }
+
+        if (spriteRenderer != null && horizontal != 0)
+        {
+            spriteRenderer.flipX = horizontal < 0;
+        }
+
+        if (audioSource != null)
+        {
+            if (Mathf.Abs(horizontal) > 0.1)
+            {
+                if (!audioSource.isPlaying)
+                    audioSource.Play();
+            }
+            else
+            {
+                audioSource.Stop();
+            }
+        }
     }
 }
+
+
 
