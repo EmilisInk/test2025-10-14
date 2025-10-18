@@ -8,7 +8,7 @@ public class Void : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            ScoreBoard.instance.DecreaseHealth(10);
+            ScoreBoard.instance.DecreaseHealth(ScoreBoard.instance.currentHealth);
         }
     }
 }
