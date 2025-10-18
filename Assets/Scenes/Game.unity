@@ -1137,7 +1137,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 0
-  collectedClip: {fileID: 0}
+  collectedClip: {fileID: 8300000, guid: aa3d8e2ebe54d76458725873ed1001c9, type: 3}
   volume: 1
 --- !u!1 &147946081
 GameObject:
@@ -5314,7 +5314,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 0
-  collectedClip: {fileID: 0}
+  collectedClip: {fileID: 8300000, guid: aa3d8e2ebe54d76458725873ed1001c9, type: 3}
   volume: 1
 --- !u!1001 &972550232
 PrefabInstance:
@@ -11519,7 +11519,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 0
-  collectedClip: {fileID: 0}
+  collectedClip: {fileID: 8300000, guid: aa3d8e2ebe54d76458725873ed1001c9, type: 3}
   volume: 1
 --- !u!1001 &2059078721
 PrefabInstance:
@@ -11663,7 +11663,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 0
-  collectedClip: {fileID: 0}
+  collectedClip: {fileID: 8300000, guid: aa3d8e2ebe54d76458725873ed1001c9, type: 3}
   volume: 1
 --- !u!1001 &2087076974
 PrefabInstance:
