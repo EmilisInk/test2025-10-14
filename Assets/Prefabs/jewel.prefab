@@ -120,4 +120,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 0
-  collectedSound: {fileID: 0}
+  collectedClip: {fileID: 8300000, guid: aa3d8e2ebe54d76458725873ed1001c9, type: 3}
+  volume: 1
